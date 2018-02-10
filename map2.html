@@ -1059,10 +1059,21 @@
 <script src="src/edit/handler/EditToolbar.Edit.js"></script>
 <script src="src/edit/handler/EditToolbar.Delete.js"></script>
 
+      <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-firestore.js"></script>
+
 <script src="js/API/lib.js"></script>
 
 <script>
     $(document).ready(function () {
+
+			firebase.initializeApp({
+				apiKey: "AIzaSyCVV1eU3-8IF5_rPHo7mQeqOE9H1FLUiho",
+				authDomain: "global-e3ad1.firebaseapp.com",
+				projectId: "global-e3ad1"
+			});
+			db = firebase.firestore();
+
         var savedStrData = util.getFromLocalStorage(util.interPageDataKey);
         id = savedStrData.id;
         mapCenter = savedStrData.center;
