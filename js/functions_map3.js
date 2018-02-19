@@ -251,7 +251,7 @@
                      ce2: parseInt($("input[name=ce2]:checked").val()),
                      ce3: parseInt($("input[name=ce3]:checked").val())
                  },
-							 livingIn: ($("input[name=live]:checked").val()) === 'true',
+							 // livingIn: ($("input[name=live]:checked").val()) === 'true',
              };
 
 
@@ -288,6 +288,7 @@
                  ce2: parseInt($("input[name=ce2]:checked").val()),
                  ce3: parseInt($("input[name=ce3]:checked").val())
              },
+					 livingIn: ($("input[name=live]:checked").val()) === 'true',
              areas: CE
          };
 
