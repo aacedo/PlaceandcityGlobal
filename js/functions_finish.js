@@ -33,6 +33,11 @@ function startOthers() {
     try {
         $('#finishBtn').click(function () {
 
+            if (($("#country").val() == "A0")) {
+                alert(translator.getKeyLanguageValue("general10A"));
+                return;
+            }
+
             if (($("#study").val() == "0")) {
                 alert(translator.getKeyLanguageValue("general10"));
                 return;

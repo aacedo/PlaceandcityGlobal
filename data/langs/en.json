@@ -4,7 +4,7 @@
   "index2a": "Answers ",
   "index2b": " nº 200, nº 500 and nº 1000, will be provided with a gift card of 50,00€. If you want to be eligible for a prize, you should provide your email at the end of the survey, so we can contact you in case you won.",
   "index3": "With your contribution, you will support the improvement of Lisbon municipality participation processes.",
-  "index3a": "Please, do the survey with ",
+  "index3a": "We strongly recommend you to do the survey on the laptop or desktop computer, since some functions perform better than in smartphones and other similar devices.",
   "index3b": "the laptop or desktop computer ",
   "index3c": ", since some functions do not work properly in smartphones and other similar devices.",
   "index4": "Do you live in Lisbon?",
@@ -25,7 +25,7 @@
   "index17": "more than 6 years",
   "index18": "Please type the zip code of your (primary) home",
   "index19": "If you do not want to give your zip code, please click the checkbox.",
-  "index20": "Please select, if necessary, the less positive topics in your parish. (Maximum 3)",
+  "index20": "Please select, if necessary, the less positive topics in your neighborhood. (Maximum 3)",
   "index21": "Supplies and market",
   "index22": "Culture",
   "index23": "Sport",
@@ -131,7 +131,11 @@
   "map1-100":"Add another word that define another area",
 
 
-
+  "map1-101":"Personal Experience (memories, meanings, attitudes, etc.)",
+  "map1-102":"Socio-cultural (friends, cultura, shops, religious aspects, study areas, etc.)",
+  "map1-103":"Physical attributes and features (environment, monuments, landmarks, etc.)",
+  "map1-104":"Usability (sport, daily actions, recreational places, etc.)",
+  "map1-105":"Other",
 
 
 
@@ -195,6 +199,8 @@
   "map2-55":"Have you attended a group (Y) meeting in the last 12 months?",
   "map2-56":"How often do you participate in the activities of the group (Y) in the last 12 months?",
   "map2-57":"To what extent did you participate in group (Y) decision-making in the last 12 months?",
+  "map2-58":"Please, select the most important reason that define this area hola",
+
 
 
   "map2-95":"Please:",
@@ -263,7 +269,7 @@
 
 
   "global1":"Thank you, we appreciate your effort",
-  "global2":"We are going to create dynamic areas to connect you with people that share your places and groups. In case you are interested to know more about the study, the chosen areas by other people and participate in the gift cards, please provide us with your email and/or twitter username. Together, we are going to improve Lisbon participation! ",
+  "global2":"We are going to create dynamic areas to connect you with people that share your places and groups. In case you are interested to know more about the study, other related studies or the chosen areas by other people, please provide us with your email and/or twitter username. Together, we are going to improve city administrative boundaries! ",
   "global3":"Twitter username",
   "global4":"Submit",
   "global5":"Tweet",
@@ -288,6 +294,7 @@
   "general7":"Please, write at least the name of one group.",
   "general8":"Please, select a type of group.",
   "general9":"Please, insert a group's nature.",
+  "general10A":"Por favor, select a country.",
   "general10":"Please, select a study level.",
   "general11":"Please, select a profession",
   "general12":"Please, select the monthly salary of your household in Euros.",
@@ -300,6 +307,8 @@
   "general19":"Group",
   "general20":"or",
   "general21":"Understood",
+  "general22":"Please, insert the reason.",
+
 
 
 

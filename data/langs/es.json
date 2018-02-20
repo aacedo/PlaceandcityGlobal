@@ -4,7 +4,7 @@
   "index2a": "Las respuestas ",
   "index2b": " nº 200, nº 500 y nº 1000 serán premiadas con un vale regalo de 50,00€. Para poder disfrutar el vale debe darnos su mail en el campo disponible al final de la encuesta.",
   "index3": "Con tu contribución, vamos a mejorar los procesos participativos de Lisboa.",
-  "index3a": "Por favor, haga el cuestionario en un ",
+  "index3a": "Recomendamos hacer el cuestionario en un ordenador portátil o de escritorio, ya que algunas funcionalidades se desarrollan mejor en estos que en smartphones y otros aparatos similares",
   "index3b": "ordenador portátil o de escritorio ",
   "index3c": "ya que algunas funcionalidades no se muestran correctamente en móviles o similares",
   "index4": "¿Vives en Lisboa?",
@@ -132,6 +132,14 @@
   "map1-100":"Añade otra palabra que defina otra área",
 
 
+  "map1-101":"Experiencia personal (memorias, significados, actitudes, etc.)",
+  "map1-102":"Socio-cultural (amigos, cultura, tiendas, aspectos religiosos, enseñanza, etc.)",
+  "map1-103":"Atributos físicos y características (medio ambiente, monumentos, etc.)",
+  "map1-104":"Usabilidad (deportes, acciones diarias, lugares de recreo, etc.)",
+  "map1-105":"Otros",
+
+
+
 
   "map2-1":"También nos gustaría preguntarte sobre los grupos de personas u organizaciones a los que perteneces. Éstos pueden ser formalmente organizados (religiosos, familiares, deportivos, trabajo...) o simplemente grupos de personas con las que haces actividades regularmente o hablas sobre temas.",
   "map2-2":"¿Puedes escribir (una o más) palabras que definan cada grupo? Por favor piensa en un grupo y escribe en la caja de texto abajo una o más palabras que definan el grupo, luego clica en “Añadir grupo”. Puedes añadir tantos grupos como quieras. Tómate tu tiempo. :)",
@@ -194,6 +202,8 @@
   "map2-55":"¿Has atendido alguna reunión del grupo Y en los últimos 12 meses?",
   "map2-56":"¿Con qué frecuencia has participado en las actividades del grupo Y en los últimos 12 meses?",
   "map2-57":"¿Con qué frecuencia has participado en las decisiones del grupo Y en los últimos 12 meses?",
+  "map2-58":"Por favor, seleccione la razón más importante para definir esta area hola",
+
 
 
   "map2-95":"Por favor:",
@@ -259,7 +269,7 @@
 
 
   "global1":"Muchas gracias, apreciamos mucho tu esfuerzo",
-  "global2":"Vamos a crear áreas dinámicas para conectarte con gente que comparte tus lugares y grupos. En caso de estar interesado en saber más sobre el estudio, las áreas escogidas por otra gente y participar en los vales regalo, por favor danos tu email y/o el usuario de Twitter. ¡Juntos vamos a mejorar la participaciñon en Lisboa!",
+  "global2":"Vamos a crear áreas dinámicas para conectarte con gente que comparte tus lugares y grupos. En caso de estar interesado en saber más sobre el estudio, otros estudios relacionados o las áreas escogidas por otra gente, por favor danos tu email y/o el usuario de Twitter. ¡Juntos vamos a mejorar los límites administrativos de las ciudades!",
   "global3":"Usuario Twitter",
   "global4":"Enviar",
   "global5":"Tweetear",
@@ -282,6 +292,7 @@
   "general7":"Por favor, indique por lo menos un nombre de grupo.",
   "general8":"Por favor, indique un tipo de grupo.",
   "general9":"Por favor, introduzca la naturaleza del grupo.",
+  "general10A":"Por favor, introduzca un país.",
   "general10":"Por favor, indique un nivel de estudios.",
   "general11":"Por favor, indique una profesión.",
   "general12":"Por favor, indique el salario mensual de su agregado familiar en Euros.",
@@ -293,6 +304,9 @@
   "general18":"Área",
   "general19":"Grupo",
   "general20":"o",
+  "general21":"Entendido",
+  "general22":"Por favor, inserte la razón.",
+
 
 
 

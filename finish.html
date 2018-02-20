@@ -86,14 +86,12 @@
           <div style="margin-bottom: 20px">
             <p style="font-weight: bold;" langkey="finish6">Género</p>
             <label class="radio-inline">
-              <input type="radio" name="gender" value="1"> <span langkey="finish7">Masculino</span>
+              <input type="radio" name="gender" value="1" checked="checked"> <span langkey="finish7">Masculino</span>
             </label>
             <label class="radio-inline">
               <input type="radio" name="gender" value="2"> <span langkey="finish8">Feminino</span>
             </label>
-            <label class="radio-inline">
-              <input type="radio" name="gender" value="3" checked="checked"> <span langkey="finish9">Não definido</span>
-            </label>
+
           </div>
           <div style="margin-bottom: 20px">
             <p style="font-weight: bold;" langkey="finish10">Idade</p>
@@ -102,6 +100,7 @@
           <div style="margin-bottom: 20px">
             <p style="font-weight: bold;" langkey="finish11">Nacionalidade</p>
             <select id = "country" style="width: 67%; max-width: 100%">
+              <option value="A0"  selected="selected"></option>
               <option value="AF">Afghanistan</option>
               <option value="AX">Åland Islands</option>
               <option value="AL">Albania</option>
@@ -279,7 +278,7 @@
               <option value="PH">Philippines</option>
               <option value="PN">Pitcairn</option>
               <option value="PL">Poland</option>
-              <option value="PT" selected="selected">Portugal</option>
+              <option value="PT">Portugal</option>
               <option value="PR">Puerto Rico</option>
               <option value="QA">Qatar</option>
               <option value="RE">Réunion</option>
@@ -388,7 +387,7 @@
             </p>
             <select id = "income">
               <option value="0"></option>
-              <option value="8" langkey="finish20">NS/NR</option>
+              <option value="7" langkey="finish20">NS/NR</option>
               <option value="1" langkey="finish21">Menos de 1000</option>
               <option value="2" langkey="finish22">1000 - 1499</option>
               <option value="3" langkey="finish23">1500 - 1999</option>

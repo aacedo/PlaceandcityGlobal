@@ -4,7 +4,7 @@
   "index2a": "Às submissões",
   "index2b": " nº 200, nº 500 e nº 1000 será oferecido um cartão oferta no montante de 50,00€. Para se habilitar a esta oferta tem de fornecer o seu email no campo disponível no final do inquérito.",
   "index3": "A sua contribuição apoia os processos participativos da cidade de Lisboa.",
-  "index3a": "Por favor, responda ao inquérito ",
+  "index3a": "Recomendamos que faça a pesquisa num computador portátil ou num computador de secretária, já que algumas funções funcionam melhor que em smartphones ou outros dispositivos similares.",
   "index3b": "num computador portátil  ou num computador de secretária ",
   "index3c": ", dado que algumas funções não funcionam bem em telemóveis e outros dispositivos semelhantes",
   "index4": "Reside em Lisboa?",
@@ -136,6 +136,13 @@
   "map1-100":"Adicione mais uma palavra para definir outra área",
 
 
+  "map1-101":"Experiência Pessoal (recordações, significados, atitudes, etc.)",
+  "map1-102":"Socioculturais (amigos, cultura, lojas, questões religiosas, áreas de estudo, etc.)",
+  "map1-103":"Atributos e características físicas (meio ambiente, monumentos, etc.)",
+  "map1-104":"Usabilidade (desporto, atividades diárias, espaços de lazer, etc.)",
+  "map1-105":"Outro",
+
+
 
 
   "map2-1":"Gostaria também de lhe perguntar sobre grupos de pessoas ou organizações, redes ou associações a que pertença. Podem ser grupos formalmente organizados (grupos religiosos, de familiares, desportivos, de local de trabalho... ) or pura e simplesmente grupos de pessoas que se juntam regularmente para realizar uma atividade ou falar sobre vários assuntos.",
@@ -198,6 +205,8 @@
   "map2-55":"Nos últimos 12 meses participou nalguma reunião do grupo Y?",
   "map2-56":"Com que frequência participou nas atividades do grupo Y nos últimos 12 meses?",
   "map2-57":"Até que ponto participou no processo de decisão do grupo Y nos últimos 12 meses?",
+  "map2-58":"Por favor selecione a razão mais importante que define esta área hola",
+
 
 
 
@@ -267,7 +276,7 @@
 
 
   "global1":"Agradecemos a sua participação",
-  "global2":"Vamos criar áreas que o vão ligar com outras pessoas que partilham os seus locais e os seus grupos. Se estiver interessado em saber os resultados do estudo, conhecer as áreas escolhidas por outras pessoas e participar nos cartãos oferta, indique-nos por favor o seu email e/ou a sua conta de twitter. Juntos, vamos melhorar a participação em Lisboa!",
+  "global2":"Vamos criar áreas que o vão ligar com outras pessoas que partilham os seus locais e os seus grupos. Se estiver interessado em saber os resultados do estudo, outros estudos relacionados ou conhecer as áreas escolhidas por outras pessoas, indique-nos por favor o seu email e/ou a sua conta de twitter. Juntos, vamos melhorar os limites administrativos das cidades!",
   "global3":"Conta de Twitter",
   "global4":"Enviar",
   "global5":"Tweetar",
@@ -292,6 +301,7 @@
   "general7":"Por favor, insira pelo menos um nome de grupo.",
   "general8":"Por favor, escolha um tipo de grupo.",
   "general9":"Por favor, introduza a natureza do grupo.",
+  "general10A":"Por favor, introduza um país.",
   "general10":"Por favor, introduza um nivel de estudios.",
   "general11":"Por favor, introduza uma profissão.",
   "general12":"Por favor, introduza o salário mensal do seu agregado familiar em Euros.",
@@ -304,6 +314,7 @@
   "general19":"Grupo",
   "general20":"ou",
   "general21":"Entendido",
+  "general22":"Por favor, introduza a razão",
 
 
 

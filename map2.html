@@ -62,11 +62,11 @@
           <div class="visible-lg visible-md visible-sm" style="position: absolute; top: 10px; left: 55px; z-index: 999">
             <div class="col-lg-12 col-md-12 col-sm-12 width-buttons-map">
               <span class="dropdown" style="margin-right: 5px;">
-                <button class="btn btn-default dropdown-toggle" type="button" id="button-freguesia" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="margin-bottom: 5px">
-                    <i class="fa fa-institution" aria-hidden="true"></i>
-                    <span langkey="map1-3">Freguesias</span>
-                    <span class="caret"></span>
-                </button>
+                <!--<button class="btn btn-default dropdown-toggle" type="button" id="button-freguesia" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="margin-bottom: 5px">-->
+                    <!--<i class="fa fa-institution" aria-hidden="true"></i>-->
+                    <!--<span langkey="map1-3">Freguesias</span>-->
+                    <!--<span class="caret"></span>-->
+                <!--</button>-->
                 <div class="dropdown-menu" style="min-width: 250px; margin: 12px 0 0">
                   <ul class="dropdown-map col-lg-6 col-md-6 col-sm-6 col-xs-6" aria-labelledby="dropdown-freguesias">
                     <li><a href="#" id="d-ajuda">Ajuda</a></li>
@@ -884,11 +884,11 @@
                 <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span><span langkey="map1-2">Apagar áreas</span>
               </button>
               <span class="dropdown" style="margin-right: 5px">
-                <button class="btn btn-default dropdown-toggle btn-xs" type="button" id="dropdown-freguesias" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" id="button-freguesiaxs">
-                  <i class="fa fa-institution" aria-hidden="true"></i>
-                  <span langkey="map1-3">Freguesias</span>
-                  <span class="caret"></span>
-                </button>
+                <!--<button class="btn btn-default dropdown-toggle btn-xs" type="button" id="dropdown-freguesias" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" id="button-freguesiaxs">-->
+                  <!--<i class="fa fa-institution" aria-hidden="true"></i>-->
+                  <!--<span langkey="map1-3">Freguesias</span>-->
+                  <!--<span class="caret"></span>-->
+                <!--</button>-->
                 <div class="dropdown-menu" style="min-width: 180px; margin: 8px 0 0; left:-100px">
                   <ul class="dropdown-map col-xs-6" aria-labelledby="dropdown-freguesias" style="margin: 0px; padding: 0px">
                     <li><a href="#" id="d-ajuda-xs">Ajuda</a></li>
@@ -1224,8 +1224,8 @@
 
                 buttonDraw.prop('disabled', false);
                 buttonDelete.prop('disabled', true);
-                $('#button-freguesia').prop('disabled', false);
-                $('#button-freguesiaxs').prop('disabled', false);
+                //$('#button-freguesia').prop('disabled', false);
+                //$('#button-freguesiaxs').prop('disabled', false);
 
 
                 /*if ($('#title2_done').is(":hidden")) {
@@ -1241,8 +1241,8 @@
                 polygonDrawer.enable();
                 buttonDelete.prop('disabled', true);
                 buttonDraw.prop('disabled', true);
-                $('#button-freguesia').prop('disabled', true);
-                $('#button-freguesiaxs').prop('disabled', true);
+                //$('#button-freguesia').prop('disabled', true);
+                //$('#button-freguesiaxs').prop('disabled', true);
                 $("#finish_button").removeClass().addClass("hidden");
                 $("#help").removeClass("hidden").addClass("show");
 
@@ -1251,16 +1251,16 @@
                     if ((e.keyCode == 27) && ($('#draw').is(":visible"))) {
                         buttonDraw.prop('disabled', false);
                         buttonDelete.prop('disabled', false);
-                        $('#button-freguesia').prop('disabled', false);
-                        $('#button-freguesiaxs').prop('disabled', false);
+                        //$('#button-freguesia').prop('disabled', false);
+                        //$('#button-freguesiaxs').prop('disabled', false);
                         $("#help").removeClass("show").addClass("hidden");
 
                     }
                     else if ((e.keyCode == 27) && ($('#another_draw').is(":visible"))) {
                         buttonDraw.prop('disabled', false);
                         buttonDelete.prop('disabled', false);
-                        $('#button-freguesia').prop('disabled', false);
-                        $('#button-freguesiaxs').prop('disabled', false);
+                        //$('#button-freguesia').prop('disabled', false);
+                        //$('#button-freguesiaxs').prop('disabled', false);
                         $("#help").removeClass("show").addClass("hidden");
                         $("#finish_button").removeClass().addClass("show");
 

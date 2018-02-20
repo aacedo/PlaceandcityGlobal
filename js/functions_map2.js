@@ -6,7 +6,7 @@
 var SC = [];
 var currGroup;
 var areasdrawn = 0;
-var name_groups =[];
+var name_groups = [];
 var current_group = [];
 var number = 0;
 var spatialyes = 0;
@@ -22,17 +22,17 @@ function startAll() {
 
 
     $('#plus_group').click(function () {
-        if (!$('#actual_group').val()&& (name_groups.length == 0)){
+        if (!$('#actual_group').val() && (name_groups.length == 0)) {
             alert(translator.getKeyLanguageValue("general7"));
         }
-        else if(!$('#actual_group').val() && (name_groups.length > 0)){
+        else if (!$('#actual_group').val() && (name_groups.length > 0)) {
             $("#continuar1").removeClass("hidden").addClass("show");
         }
-        else{
+        else {
             name_groups.push($('#actual_group').val());
             $('#actual_group').val("");
             namesgroups();
-            contador=0;
+            contador = 0;
 
         }
 
@@ -53,10 +53,10 @@ function startAll() {
 
     }
 
-    $( "#actual_group" ).keypress(function( event ) {
+    $("#actual_group").keypress(function (event) {
 
-        if (!$('#actual_group').val()){
-            if (contador==0){
+        if (!$('#actual_group').val()) {
+            if (contador == 0) {
                 $("#continuar1").removeClass("show").addClass("hidden");
             }
             else {
@@ -89,7 +89,7 @@ function startAll() {
             startMapComponents();
         }
         else {
-            alert(  translator.getKeyLanguageValue("general7"));
+            alert(translator.getKeyLanguageValue("general7"));
         }
     });
 
@@ -164,37 +164,36 @@ function startAll() {
                 SC.push(currGroup);
 
                 if (number == name_groups.length - 1) {
-                    if (spatialyes != 0) {
-                        showAllGroups();
-                        $("#select_group").toggleClass("hidden show");
-                        $("#SC_group").toggleClass("hidden show");
+
+
+                    // var id = util.getFromLocalStorage(util.interPageDataKey);
+
+                    for (var i = 0; i < SC.length; i++) {
+                        var cGroup = SC[i];
+                        for (var j = 0; j < cGroup.areas.length; j++) {
+                            cGroup.areas[j].layer = /*JSON.stringify(*/cGroup.areas[j].layer.toGeoJSON()/*)*/;
+                        }
                     }
-                    else {
 
-                        // var id = util.getFromLocalStorage(util.interPageDataKey);
+                    var data2 = {
+                        type: "sc",
+                        id: id,
+                        groups: SC
+                    };
 
-                        var data2 = {
-                            type: "sc",
-                            id: id,
-                            groups: SC
-                        };
-
-                        app.setSC(id, data2, function (response) {
-                            if (response === false) {
-                                alert(translator.getKeyLanguageValue("general1"));
-                            }
-                            else {
-                                util.redirectToPage({
-                                    url: "map3.html",
-                                    payload: {id:response.id, center: mapCenter}
-                                });
-                            }
-                        });
+                    app.setSC(id, data2, function (response) {
+                        if (response === false) {
+                            alert(translator.getKeyLanguageValue("general1"));
+                        }
+                        else {
+                            util.redirectToPage({
+                                url: "map3.html",
+                                payload: {id: response.id, center: mapCenter}
+                            });
+                        }
+                    });
 
 
-
-
-                    }
                 }
                 else {
                     number = number + 1;
@@ -227,13 +226,13 @@ function startAll() {
             $("#other_name").removeClass().addClass("show");
             var anterior = $('#nature').val();
         }
-        else if(($("#nature").val() == "0")){
+        else if (($("#nature").val() == "0")) {
             $("#SC_group").removeClass().addClass("hidden");
             $("#other_name").removeClass().addClass("hidden");
 
 
         }
-        else    {
+        else {
 
 
             $("#other_name").removeClass().addClass("hidden");
@@ -320,9 +319,36 @@ function startAll() {
         }
 
         if (number == name_groups.length - 1) {
-            showAllGroups();
-            $("#select_group").toggleClass("hidden show");
-            $("#another_draw").toggleClass("hidden show");
+
+            for (var i = 0; i < SC.length; i++) {
+                var cGroup = SC[i];
+                for (var j = 0; j < cGroup.areas.length; j++) {
+                    cGroup.areas[j].layer = /*JSON.stringify(*/cGroup.areas[j].layer.toGeoJSON()/*)*/;
+                }
+            }
+
+
+            var data2 = {
+                type: "sc",
+                id: id,
+                groups: SC
+            };
+
+            app.setSC(id, data2, function (response) {
+                if (response === false) {
+                    alert(translator.getKeyLanguageValue("general1"));
+                }
+                else {
+                    util.redirectToPage({
+                        url: "map3.html",
+                        payload: {id: response.id, center: mapCenter}
+                    });
+                }
+            });
+
+
+            //$("#select_group").toggleClass("hidden show");
+            //$("#another_draw").toggleClass("hidden show");
         }
         else {
             number = number + 1;
@@ -342,165 +368,8 @@ function startAll() {
         }
     });
 
-    var highlightedGroup = null;
 
-    function showAllGroups() {
-        buttonDraw.prop('disabled', true);
-        buttonDelete.prop('disabled', true);
-        $('#button-freguesia').prop('disabled', true);
-        $('#button-freguesiaxs').prop('disabled', true);
-        $("#specifications").removeClass().addClass("hidden");
-
-
-        var group = new L.featureGroup();
-        for (var i = 0; i < SC.length; i++) {
-            var cGroup = SC[i];
-            for (var j = 0; j < cGroup.areas.length; j++) {
-                cGroup.areas[j].layer.setStyle({color: '#6000ff'});
-                group.addLayer(cGroup.areas[j].layer);
-                map.addLayer(cGroup.areas[j].layer);
-            }
-            // Add to radio
-
-            if (cGroup.areas.length != 0) {
-                $('#radios').append('<div class="radio"><label><input type="radio" name="sc_groups" value="' + i + '"/>' + translator.getKeyLanguageValue("general19") + ": " + cGroup.name + '</label></div>');
-            }
-        }
-
-        $("input[name='sc_groups']").change(function () {
-            if (highlightedGroup != null) {
-                for (var j = 0; j < highlightedGroup.areas.length; j++) {
-                    highlightedGroup.areas[j].layer.setStyle({color: '#6000ff'});
-                }
-            }
-            var index = parseInt($("input[name=sc_groups]:checked").val());
-            highlightedGroup = SC[index];
-            for (var j = 0; j < highlightedGroup.areas.length; j++) {
-                highlightedGroup.areas[j].layer.setStyle({color: '#FF0000'});
-            }
-        });
-
-        map.fitBounds(group.getBounds(), null);
-
-        $('#choose_group').click(function () {
-
-            if ($('input[name=sc_groups]:checked').length) {
-
-
-                buttonDraw.prop('disabled', true);
-                buttonDelete.prop('disabled', true);
-                $('#button-freguesia').prop('disabled', true);
-                $('#button-freguesiaxs').prop('disabled', true);
-                $("#sc_done").toggleClass("hidden show");
-                $("#select_group").toggleClass("hidden show");
-
-                for (var i = 0; i < SC.length; i++) {
-                    for (var j = 0; j < SC[i].areas.length; j++) {
-                        map.removeLayer(SC[i].areas[j].layer);
-                    }
-                }
-
-                var group = new L.featureGroup();
-
-                for (var j = 0; j < highlightedGroup.areas.length; j++) {
-                    highlightedGroup.areas[j].layer.setStyle({color: '#FF0000'});
-                    group.addLayer(highlightedGroup.areas[j].layer);
-                    map.addLayer(highlightedGroup.areas[j].layer);
-                }
-                L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {}).addTo(map);
-                map.fitBounds(group.getBounds(), null);
-
-
-                var title = $("#change").html().replace('X', "<b>" + highlightedGroup.name + "</b>");
-                $("#change").html(title);
-                var soc1re = $("#soc1").html().replace('Y', "<b>" + highlightedGroup.name + "</b>");
-                $("#soc1").html(soc1re);
-                var soc2re = $("#soc2").html().replace('Y', "<b>" + highlightedGroup.name + "</b>");
-                $("#soc2").html(soc2re);
-                var soc3re = $("#soc3").html().replace('Y', "<b>" + highlightedGroup.name + "</b>");
-                $("#soc3").html(soc3re);
-                var n1re = $("#n1").html().replace('Y', "<b>" + highlightedGroup.name + "</b>");
-                $("#n1").html(n1re);
-                var n2re = $("#n2").html().replace('Y', "<b>" + highlightedGroup.name + "</b>");
-                $("#n2").html(n2re);
-                var n3re = $("#n3").html().replace('Y', "<b>" + highlightedGroup.name + "</b>");
-                $("#n3").html(n3re);
-                var cee1re = $("#cee1").html().replace('Y', "<b>" + highlightedGroup.name + "</b>");
-                $("#cee1").html(cee1re);
-                var cee2re = $("#cee2").html().replace('Y', "<b>" + highlightedGroup.name + "</b>");
-                $("#cee2").html(cee2re);
-                var cee3re = $("#cee3").html().replace('Y', "<b>" + highlightedGroup.name + "</b>");
-                $("#cee3").html(cee3re);
-                var cp1re = $("#cp1").html().replace('Y', "<b>" + highlightedGroup.name + "</b>");
-                $("#cp1").html(cp1re);
-                var cp2re = $("#cp2").html().replace('Y', "<b>" + highlightedGroup.name + "</b>");
-                $("#cp2").html(cp2re);
-                var cp3re = $("#cp3").html().replace('Y', "<b>" + highlightedGroup.name + "</b>");
-                $("#cp3").html(cp3re);
-            }
-            else {
-                alert(translator.getKeyLanguageValue("general15"));
-            }
-
-        });
-    }
-
-
-    $('#questions-sc').click(function () {
-
-
-        var scvalidation = $('[name=soc1]:checked,[name=soc2]:checked,[name=soc3]:checked,[name=n1]:checked,[name=n2]:checked,[name=n3]:checked,[name=cee1]:checked,[name=cee2]:checked,[name=cee3]:checked,[name=cp1]:checked,[name=cp2]:checked,[name=cp3]:checked');
-        if (scvalidation.length < 12) {
-            // alert("Please, answer all the questions");
-            alert(translator.getKeyLanguageValue("general5"));
-            return;
-        }
-
-
-        highlightedGroup.dimensions = {
-            sc1: parseInt($("input[name=soc1]:checked").val()),
-            sc2: parseInt($("input[name=soc2]:checked").val()),
-            sc3: parseInt($("input[name=soc3]:checked").val()),
-            n1: parseInt($("input[name=n1]:checked").val()),
-            n2: parseInt($("input[name=n2]:checked").val()),
-            n3: parseInt($("input[name=n3]:checked").val()),
-            cee1: parseInt($("input[name=cee1]:checked").val()),
-            cee2: parseInt($("input[name=cee2]:checked").val()),
-            cee3: parseInt($("input[name=cee3]:checked").val()),
-            cp1: parseInt($("input[name=cp1]:checked").val()),
-            cp2: parseInt($("input[name=cp2]:checked").val()),
-            cp3: parseInt($("input[name=cp3]:checked").val())
-        };
-
-        for (var i = 0; i < SC.length; i++) {
-            var cGroup = SC[i];
-            for (var j = 0; j < cGroup.areas.length; j++) {
-                cGroup.areas[j].layer = /*JSON.stringify(*/cGroup.areas[j].layer.toGeoJSON()/*)*/;
-            }
-        }
-
-        // var id = util.getFromLocalStorage(util.interPageDataKey);
-
-        var data2 = {
-            type: "sc",
-            groups: SC
-        };
-
-
-        app.setSC(id, data2, function (response) {
-            if (response === false) {
-                alert(translator.getKeyLanguageValue("general1"));
-            }
-            else {
-                util.redirectToPage({
-                    url: "map3.html",
-                    payload: {id:response.id, center: mapCenter}
-                });
-            }
-        });
-    });
-
- //Freguesia buttons
+    //Freguesia buttons
     $('#d-ajuda').click(function () {
         map.setView([38.711402, -9.199039], 15);
     });
