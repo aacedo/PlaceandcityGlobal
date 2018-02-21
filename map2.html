@@ -1294,6 +1294,7 @@
                     // Small Map
                     var mapxs = L.map('map2', {
                         scrollWheelZoom: false,
+                        dragging: false,
                     });
                     mapxs.on('load', function (e) {
                         if (isElementInViewport($('#map2'))) {
