@@ -148,6 +148,7 @@ function startMapComponents() {
             // attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
+        //search controle
         map.addControl( new L.Control.Search({
             url: 'http://nominatim.openstreetmap.org/search?format=json&q={s}',
             jsonpParam: 'json_callback',
@@ -270,6 +271,7 @@ function startMapComponents() {
 
         var map1 = L.map('map', {
             scrollWheelZoom: false,
+            dragging: false,
         });
         map1.on('load', function (e) {
             if (isElementInViewport($('#map'))) {

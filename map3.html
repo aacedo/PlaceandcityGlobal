@@ -21,6 +21,8 @@
     <link href="css/leaflet.css" rel="stylesheet" type="text/css"/>
     <link href="css/leaflet.draw.css" rel="stylesheet" type="text/css"/>
     <link href="css/bootstrap-slider.css" rel="stylesheet" type="text/css"/>
+    <link href="css/leaflet-search.css" rel="stylesheet" type="text/css"/>
+    <link href="css/leaflet-search.mobile.css" rel="stylesheet" type="text/css"/>
 
 </head>
 
@@ -496,6 +498,8 @@
     <script src="js/leaflet.js"></script>
     <script src="js/leaflet-src.js"></script>
     <script src="js/leaflet.draw.js"></script>
+    <script src="js/leaflet-search-geocoder.js"></script>
+    <script src="js/leaflet-search.js"></script>
     <script src="js/bootstrap-slider.js"></script>
     <script src="js/functions_map3.js"></script>
 
@@ -550,6 +554,7 @@
             if (!id) {
              window.location.href = "index.html";
              }
+
             //startMapComponents();
             startAll();
         });
@@ -575,6 +580,7 @@
             // Big Map
             var map1 = L.map('map', {
                 scrollWheelZoom: false,
+                dragging: false,
             });
             map1.on('load', function (e) {
                 if (isElementInViewport($('#map'))) {
@@ -602,6 +608,20 @@
                 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
                     // attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 }).addTo(map);
+
+                //search controle
+                map.addControl( new L.Control.Search({
+                  url: 'http://nominatim.openstreetmap.org/search?format=json&q={s}',
+                  jsonpParam: 'json_callback',
+                  propertyName: 'display_name',
+                  propertyLoc: ['lat','lon'],
+                  marker: L.circleMarker([0,0],{radius:30}),
+                  position:'topleft', 
+                  autoCollapse: true,
+                  autoType: false,
+                  minLength: 2
+                }) );
+
                 // Customize button draw polygon - personal contribution
                 var polygonDrawer = new L.Draw.Polyline(map);
 
