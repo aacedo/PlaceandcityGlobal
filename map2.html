@@ -1244,9 +1244,14 @@
 
 
                     var savedStrData = util.getFromLocalStorage(util.interPageDataKey);
-                    id = savedStrData.id;
-                    mapCenter = savedStrData.center;
-                    if (!id) {
+                    if (savedStrData) {
+                        id = savedStrData.id;
+                        mapCenter = savedStrData.center;
+                        if (!id) {
+                            window.location.href = "index.html";
+                        }
+                    }
+                    else{
                         window.location.href = "index.html";
                     }
 

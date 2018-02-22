@@ -1003,9 +1003,14 @@
 
 
                 var savedStrData = util.getFromLocalStorage(util.interPageDataKey);
-                id = savedStrData.id;
-                if (!id) {
-                    window.location.href = "index.html";
+                if (savedStrData) {
+                    id = savedStrData.id;
+                    if (!id) {
+                        window.location.href = "index.html";
+                    }
+                }
+                else{
+                    window.location.href = "index.html"
                 }
 
                 //startMapComponents();
