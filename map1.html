@@ -1011,7 +1011,7 @@
                 //startMapComponents();
 
                 $.ajax({
-                    url: 'http://ip-api.com/json',
+                    url: 'https://geoip-db.com/json/',
                     dataType: "json",
                     cache: true,
                     method: 'GET',
@@ -1030,8 +1030,8 @@
                 }
 
                 function doIPCentering(data) {
-                    if (data && data.lat && data.lon)
-                        mapCenter = [data.lat, data.lon];
+                    if (data && data.latitude && data.longitude)
+                        mapCenter = [data.latitude, data.longitude];
                     startAll();
                 }
             });
