@@ -14,6 +14,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!--  Login Google -->
+  <!--   <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script> -->
+
+
     <!--  Meta Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@engagingeo">
@@ -38,23 +44,53 @@
 </head>
 
 <body>
+
+<!--  Login Facebook -->
 <div id="fb-root"></div>
 <script>
-    FB.getLoginStatus(function(response) {
-  if (response.status === 'connected') {
-    console.log('Logged in.');
-  }
-  else {
-    FB.login();
-  }
-});
-    (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/ca_ES/sdk.js#xfbml=1&autoLogAppEvents=1&version=v2.12&appId=1255866227829550';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1255866227829550',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v3.0'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+</script>
+<!--  End Login Facebook -->
+
+<!--  Login Google -->
+<!-- <script>
+  function onSignIn(googleUser) {
+    // Useful data for your client-side scripts:
+    var profile = googleUser.getBasicProfile();
+    console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+    console.log('Full Name: ' + profile.getName());
+    console.log('Given Name: ' + profile.getGivenName());
+    console.log('Family Name: ' + profile.getFamilyName());
+    console.log("Image URL: " + profile.getImageUrl());
+    console.log("Email: " + profile.getEmail());
+
+    // The ID token you need to pass to your backend:
+    var id_token = googleUser.getAuthResponse().id_token;
+    console.log("ID Token: " + id_token);
+  };
+</script> -->
+<!--  End Login Google -->
+
+
 <!-- ------------------------------- Navbar ----------------------------------------------------------------------------- -->
 <nav class="navbar navbar-default navbar-fixed-top" style="margin-bottom: 0px">
     <div class="container-fluid">
@@ -191,23 +227,31 @@
                         <a type="button" id="finishBtn" class="btn btn-primary float-right"><span langkey="global4">Enviar</span></a>
                     </div>
                     <div class="no-float"></div>
+
                     <!--  Social media  -->
                     <div style="margin-bottom: 15px; margin-top: 30px; text-align: center;">
+
                         <!--  Facebook  -->
+                        <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
+
                         <!-- <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fplaceandcity.com&layout=button&size=small&mobile_iframe=true&appId=1255866227829550&width=81&height=20" width="90" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe> -->
 
+
                         <!--  Twitter  -->
-                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://placeandcity.com/" data-lang="pt"><span langkey="global5">Tweetar</span></a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                       <!--  <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://placeandcity.com/" data-lang="pt"><span langkey="global5">Tweetar</span></a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script> -->
 
                         <!--  Google+  -->
+                        <!-- <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div> -->
+
                         <!-- <span class="g-plus" data-action="share" data-annotation="none" data-href="http://placeandcity.com/engagingeographies/"></span>  -->
+
+
                     </div>
                     <!-- ----------------------------------  NEW  --------------------------- -->
                     <div  style="text-align: center; margin-top: 80px; margin-bottom: 80px">
                         <a type="" id="blog" class="link-secondary h4" style="border: 1px solid; padding: 20px" href="http://blog.placeandcity.com/"><span langkey="NEWTEXT">Visita nuestro blog</span></a> 
                     </div>
                     <!-- ----------------------------------  End NEW  --------------------------- -->
-                    <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
                     
                     <h3 style="margin-top: 50px; text-align: center;">
                         <span langkey="global6">Até à próxima :)</span>
@@ -443,8 +487,8 @@
 			});
 			db = firebase.firestore();
 
-        var savedStrData = util.getFromLocalStorage(util.interPageDataKey);
-        id = savedStrData.id;
+        // var savedStrData = util.getFromLocalStorage(util.interPageDataKey);
+        // id = savedStrData.id;
         /*if(!id){
            // window.location.href = "index.html";
         }*/
