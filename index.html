@@ -24,7 +24,31 @@
 </head>
 
 <body>
+<!--  Login Facebook -->
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1255866227829550',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v3.0'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
 
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+</script>
+<!--  End Login Facebook -->
 <!-- ------------------------------- Modal 9 Project's explanation  ------------------------------------------------------- -->
 <div class="modal fade" id="myModal9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -75,12 +99,19 @@
                 <p style="font-size: 12px">
                     <span langkey="index7 "> Notas:</span>
                     <br>
-                    <span langkey="index8">1.Todos os dados recolhidos neste questionário serão tratados de forma anónima e confidencial e não serão utilizados para fins comerciais ou cedidos a terceiros.</span>
+                    <!-- ----------------------------------  NEW  --------------------------- -->
+                    <span langkey="index8">1.Todos os dados recolhidos neste questionário serão tratados de forma anónima e confidencial e não serão utilizados para fins comerciais ou cedidos a terceiros. Para más informaión lea nuestra <a id="privacypolicy" class="link-secondary" href="https://placeandcity.com/privacypolicy.html"><span langkey="NEWTEXT">Política de Privacidad</span></a></span>
+                    <!-- ----------------------------------  End NEW  --------------------------- -->
                     <br>
                     <span langkey="index8a">2. Se pretender esclarecer alguma dúvida ou pedir alguma informação sobre este estudo, queira por favor contactar-nos através do seguinte endereço de email: acedo@novaims.unl.pt (Albert Acedo Sánchez) ou visite o nosso <a
                             class="link-secondary" href="http://www.engagingeographies.com/blog">blog</a>.</span>
                     <br>
                 </p>
+                <!-- ----------------------------------  NEW  --------------------------- -->
+                <!--  Login Facebook  -->
+                <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
+                <!-- ----------------------------------  End NEW  --------------------------- -->
+
             </div> <!--/.modal-body -->
             <div class="modal-footer" style="border:none;">
                 <div class="float-left" style="color: #A9A9A9; padding-top: 8px">
@@ -110,11 +141,6 @@
                 </div>
             </div>
             <hr style="width: 100%;">
-            <!-- ----------------------------------  NEW  --------------------------- -->
-            <div  style="text-align: center; margin-top: 10px; margin-bottom: 20px">
-                <a id="privacypolicy" class="link-secondary" href="https://placeandcity.com/privacypolicy.html"><span langkey="NEWTEXT">Privacy Policy</span></a> 
-            </div>
-            <!-- ----------------------------------  End NEW  --------------------------- -->
 
         </div> <!--/.modal-content -->
     </div> <!--/.modal-dialog -->

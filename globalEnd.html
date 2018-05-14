@@ -45,32 +45,6 @@
 
 <body>
 
-<!--  Login Facebook -->
-<div id="fb-root"></div>
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '1255866227829550',
-      cookie     : true,
-      xfbml      : true,
-      version    : 'v3.0'
-    });
-      
-    FB.AppEvents.logPageView();   
-      
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-
-</script>
-<!--  End Login Facebook -->
-
 <!--  Login Google -->
 <!-- <script>
   function onSignIn(googleUser) {
@@ -232,13 +206,12 @@
                     <div style="margin-bottom: 15px; margin-top: 30px; text-align: center;">
 
                         <!--  Facebook  -->
-                        <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
 
-                        <!-- <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fplaceandcity.com&layout=button&size=small&mobile_iframe=true&appId=1255866227829550&width=81&height=20" width="90" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe> -->
+                        <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fplaceandcity.com&layout=button&size=small&mobile_iframe=true&appId=1255866227829550&width=81&height=20" width="90" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 
 
                         <!--  Twitter  -->
-                       <!--  <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://placeandcity.com/" data-lang="pt"><span langkey="global5">Tweetar</span></a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script> -->
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://placeandcity.com/" data-lang="pt"><span langkey="global5">Tweetar</span></a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
                         <!--  Google+  -->
                         <!-- <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div> -->
@@ -487,8 +460,8 @@
 			});
 			db = firebase.firestore();
 
-        // var savedStrData = util.getFromLocalStorage(util.interPageDataKey);
-        // id = savedStrData.id;
+        var savedStrData = util.getFromLocalStorage(util.interPageDataKey);
+        id = savedStrData.id;
         /*if(!id){
            // window.location.href = "index.html";
         }*/
