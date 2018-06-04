@@ -4,9 +4,7 @@ node_js:
 script:
  - echo "Deploying"
  - dir
- - cd PlaceandcityGlobal
- - dir
- - cd ..
+ - cat index.html
  - mkdir ../public
  - cp -r * ../public
  - mv ../public public
