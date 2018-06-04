@@ -3,6 +3,10 @@ node_js:
  - "6.11.5"
 script:
  - echo "Deploying"
+ - dir
+ - cd PlaceandcityGlobal
+ - dir
+ - cd ..
  - mkdir ../public
  - cp -r * ../public
  - mv ../public public
