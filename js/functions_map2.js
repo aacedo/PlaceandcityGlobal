@@ -287,7 +287,7 @@ function startAll() {
                 brsc1: parseInt($("input[name=brsc1]:checked").val()),
                 brsc2: parseInt($("input[name=brsc2]:checked").val()),
                 brsc3: parseInt($("input[name=brsc3]:checked").val()),
-
+            observationssc: ($('#observationssc').val())
             }
         };
 
@@ -298,6 +298,9 @@ function startAll() {
         $("input[name=brsc1]").prop('checked', false);
         $("input[name=brsc2]").prop('checked', false);
         $("input[name=brsc3]").prop('checked', false);
+
+        $("#observationssc").val("");
+
 
 
 

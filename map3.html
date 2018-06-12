@@ -129,12 +129,12 @@
           </p>
           <br>
           <ul>
-            <li>
-              <p>
-                <span langkey="map1-17">Puedes ir a un barrio específico utilizando el botón</span>
-                <b langkey="map1-17a"></b><span langkey="map1-12c">using the </span>
-              </p>
-            </li>
+            <!--<li>-->
+              <!--<p>-->
+                <!--<span langkey="map1-17">Puedes ir a un barrio específico utilizando el botón</span>-->
+                <!--<b langkey="map1-17a"></b><span langkey="map1-12c">using the </span>-->
+              <!--</p>-->
+            <!--</li>-->
             <li>
               <p>
                 <span langkey="map1-15">Se necessitar, pode apagar a área pressionando o </span>
@@ -161,11 +161,11 @@
           </div>
         </div>
         <!-- ----------------------------------  NEW  --------------------------- -->
-        <div class="hidden">
-          <p style="margin-top: 20px; font-weight: bold" langkey="NEWTEXT">
+        <div class="hidden" id="observations_ce">
+          <p style="margin-top: 20px; font-weight: bold" langkey="general151">
             Lorem ipsum lorem
           </p>
-          <input type="text" class="form-control" id="" placeholder="lorem ipsum">
+          <input type="text" class="form-control" id="observationsce" >
         </div>
         <!-- ----------------------------------  End NEW  --------------------------- -->
         <div class="hidden" id="another_draw_ce">
@@ -674,6 +674,7 @@
                     $("#questions-ce").removeClass("hidden").addClass("show");
                     $("#draw_ce").removeClass().addClass("hidden");
                     $("#live_area").removeClass().addClass("show");
+                    $("#observations_ce").removeClass().addClass("show");
                     buttonDelete.prop('disabled', false);
                     $("#finish_button").removeClass().addClass("show");
                     $('#button-freguesia').prop('disabled', false);
@@ -712,6 +713,10 @@
                     $("#draw_ce").removeClass().addClass("show");
                     $("#another_draw_ce").removeClass().addClass("hidden");
                     $("#live_area").removeClass().addClass("hidden");
+                    $("#observations_ce").removeClass().addClass("hidden");
+                    $("#observationsce").val("");
+
+
                     if (CE.length > 1) {
                         map.removeLayer(CE[CE.length - 1].layer);
                         CE.pop();
@@ -730,10 +735,14 @@
                 buttonDraw.on('click', function () {
                     if ($("#live_area").is(":visible")) {
                         CE[CE.length - 1].livingIn = (($("input[name=live]:checked").val()) === 'true');
+                        CE[CE.length - 1].observationsce = ($('#observationsce').val());
+
                     }
                     var polygonDrawer = new L.Draw.Polygon(map, drawControl);
                     polygonDrawer.enable();
                     $("#live_area").removeClass().addClass("hidden");
+                    $("#observationsce").val("");
+                    $("#observations_ce").removeClass().addClass("hidden");
                     $('#button-freguesia').prop('disabled', true);
                     $('#button-freguesiaxs').prop('disabled', true);
                     buttonDelete.prop('disabled', true);

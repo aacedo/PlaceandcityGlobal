@@ -76,6 +76,12 @@ function startall() {
             $('#myModal12').modal({backdrop: 'static', keyboard: false});
 
         }
+
+        if (($("#homecountry").val() == "A0")) {
+            alert(translator.getKeyLanguageValue("general10A"));
+            return;
+        }
+
     });
 
 
@@ -96,6 +102,7 @@ function startall() {
         var howlong = parseInt($("input[name=howlong_no]:checked").val());
         var zip = $("#zipglobal").val();
         var problem = [];
+        var homecountry = $("#homecountry").val()
         $("input[name=problem]:checked").each(function () {
             problem.push(parseInt($(this).val()));
         });
@@ -103,6 +110,7 @@ function startall() {
         var data = {
             howlong: howlong,
             zip: zip,
+            homecountry: homecountry,
             problem: problem,
             experiment: experiment
         };

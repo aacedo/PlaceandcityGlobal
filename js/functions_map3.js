@@ -288,9 +288,11 @@
                  ce2: parseInt($("input[name=ce2]:checked").val()),
                  ce3: parseInt($("input[name=ce3]:checked").val())
              },
-					 livingIn: ($("input[name=live]:checked").val()) === 'true',
-             areas: CE
-         };
+             livingIn: ($("input[name=live]:checked").val()) === 'true',
+             areas: CE,
+             observationsce: ($('#observationsce').val())
+
+     };
 
 
          app.setCE(id, data, function (response) {
@@ -305,6 +307,7 @@
                  });
              }
          });
+
      });
 
    $('#myModal15').modal('show');

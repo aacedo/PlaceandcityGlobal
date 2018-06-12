@@ -1,6 +1,6 @@
 {
-  "index1": "Este questionário é parte integrante de um projeto de investigação da Nova Information Management School (NOVA IMS) da Universidade Nova de Lisboa. O objetivo principal é perceber a forma como a perceção do local e as relações sociais do cidadão influenciam a sua participação numa dada área urbana.",
-  "index2": "O preenchimento do questionário demora cerca de 5 minutos e a atividade de mapeamento cerca de 10 minutos, dependendo do número de áreas que se pretenderem assinalar.",
+  "index1": "Este questionário é parte integrante de um projeto de investigação do projeto Place & City. O objetivo principal é perceber a forma como a perceção do local e as relações sociais do cidadão influenciam a sua participação numa dada área urbana.",
+  "index2": "O preenchimento do questionário demora cerca de 5 minutos e a atividade de mapeamento cerca de 7 minutos, dependendo do número de áreas que se pretenderem assinalar.",
   "index2a": "Às submissões",
   "index2b": " nº 200, nº 500 e nº 1000 será oferecido um cartão oferta no montante de 50,00€. Para se habilitar a esta oferta tem de fornecer o seu email no campo disponível no final do inquérito.",
   "index3": "A sua contribuição apoia os processos participativos da cidade de Lisboa.",
@@ -24,6 +24,7 @@
   "index16": "3 a 6 anos",
   "index17": "Mais do que 6 anos",
   "index18": "Indique por favor o código postal da sua residência",
+  "index18a": "Indique por favor en que pais se encuentra a sua casa",
   "index19": "Se não desejar indicar o seu código postal, selecione por favor na caixa",
   "index20": "Selecione por favor aspetos menos positivos da sua freguesia (máximo 3)",
   "index21": "Abastecimiento e Mercados",
@@ -333,6 +334,7 @@
 
 
 
+  "general151": "Observaçōes"
 
 
 

@@ -1,6 +1,6 @@
 {
-  "index1": "Este cuestionario es parte de un proyecto de investigación de la universidad NOVA (Lisboa). El principal objetivo del estudio es comprender como las percepciones de los ciudadanos y sus relaciones sociales, influyen en la participación pública en un contexto urbano.",
-  "index2": "Responder el cuestionario se tarda menos de 5 minutos y la actividad de dibujo le lleva a la mayoría de la gente unos 10 minutos, dependiendo del número de áreas a definir.",
+  "index1": "Este cuestionario es parte de un proyecto del grupo de investigación Place & City. El principal objetivo del estudio es comprender como las percepciones de los ciudadanos y sus relaciones sociales, influyen en la participación pública en un contexto urbano.",
+  "index2": "Responder el cuestionario se tarda menos de 5 minutos y la actividad de dibujo le lleva a la mayoría de la gente unos 7 minutos, dependiendo del número de áreas a definir.",
   "index2a": "Las respuestas ",
   "index2b": " nº 200, nº 500 y nº 1000 serán premiadas con un vale regalo de 50,00€. Para poder disfrutar el vale debe darnos su mail en el campo disponible al final de la encuesta.",
   "index3": "Con tu contribución, vamos a mejorar los procesos participativos de Lisboa.",
@@ -14,6 +14,7 @@
   "index7": "Notas:",
   "index8": "1. Todos los datos recolectados son tratados con confidencialidad y anonimato, además no serán usados con fines comerciales o distribuidos a terceros.",
   "index8a": "2. Para obtener más información o dudas acerca del estudio, puedes contactar con nosotros usando el mail acedo@novaims.unl.pt (Albert Acedo Sánchez).",
+  "index8b": "o siste nuestro",
   "index9": "Siguiente",
   "index10": "Por favor, seleccione el barrio donde vive",
   "index11": "Prev",
@@ -24,6 +25,7 @@
   "index16": "3-6 años",
   "index17": "más de 6 años",
   "index18": "Indica por favor el código postal donde se encuentra su casa",
+  "index18a": "Indica por favor en que país se encuentra su casa",
   "index19": "Si no quieres dar tu código postal, por favor marca el cuadro.",
   "index20": "Por favor selecciona los temas menos positivos de tu barrio (máximo 3) si es necesario",
   "index21": "Abastecimiento y mercado",
@@ -317,7 +319,12 @@
   "general122": "Clique en el primer punto para cerrar el área.",
 
 
-  "general150": "¿Quieres participar en los próximos procesos participativos de tu ciudad?"
+  "general150": "¿Quieres participar en los próximos procesos participativos de tu ciudad?",
+
+
+  "general151": "Observaciones"
+
+
 
 
 

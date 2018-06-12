@@ -142,6 +142,7 @@ function startAll() {
     $('#sliders_done_button').click(function () {
 
         var reasonvalue;
+        var observationssop;
         var naturevalidation = $('[name=na1]:checked,[name=na2]:checked,[name=na3]:checked,[name=na4]:checked');
         if (naturevalidation.length < 4) {
             alert(translator.getKeyLanguageValue("general5"));
@@ -186,7 +187,8 @@ function startAll() {
                     na1: parseInt($("input[name=na1]:checked").val()),
                     na2: parseInt($("input[name=na2]:checked").val()),
                     na3: parseInt($("input[name=na3]:checked").val()),
-                    na4: parseInt($("input[name=na4]:checked").val())
+                    na4: parseInt($("input[name=na4]:checked").val()),
+                observationssop: ($('#observationssop').val())
                 }
             };
 
@@ -231,6 +233,8 @@ function startAll() {
             $("input[name=na2]").prop('checked', false);
             $("input[name=na3]").prop('checked', false);
             $("input[name=na4]").prop('checked', false);
+            $("#observationssop").val("");
+
         }
         else {
 
@@ -255,7 +259,8 @@ function startAll() {
                     na1: parseInt($("input[name=na1]:checked").val()),
                     na2: parseInt($("input[name=na2]:checked").val()),
                     na3: parseInt($("input[name=na3]:checked").val()),
-                    na4: parseInt($("input[name=na4]:checked").val())
+                    na4: parseInt($("input[name=na4]:checked").val()),
+                observationssop: ($('#observationssop').val())
                 }
             };
 
@@ -285,6 +290,9 @@ function startAll() {
             $("input[name=na2]").prop('checked', false);
             $("input[name=na3]").prop('checked', false);
             $("input[name=na4]").prop('checked', false);
+
+            $("#observationssop").val("");
+
 
 
 

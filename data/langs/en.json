@@ -1,6 +1,6 @@
 {
-  "index1": "The following web-map survey is part of a research project at NOVA IMS (Lisbon). Its primary objective is to understand how citizens' place perceptions, and their relationships, influence participation in a given urban area.",
-  "index2": "The questionnaire will take less than 5 minutes, and the mapping activity takes most people around 10 minutes, depending on how many areas you define.",
+  "index1": "The following web-map survey is part of a research project at Place & City research group. Its primary objective is to understand how citizens' place perceptions, and their relationships, influence participation in a given urban area.",
+  "index2": "The questionnaire will take less than 5 minutes, and the mapping activity takes most people around 7 minutes, depending on how many areas you define.",
   "index2a": "Answers ",
   "index2b": " nº 200, nº 500 and nº 1000, will be provided with a gift card of 50,00€. If you want to be eligible for a prize, you should provide your email at the end of the survey, so we can contact you in case you won.",
   "index3": "With your contribution, you will support the improvement of Lisbon municipality participation processes.",
@@ -24,6 +24,7 @@
   "index16": "3-6 years",
   "index17": "more than 6 years",
   "index18": "Please type the zip code of your (primary) home",
+  "index18a": "Please select in which country is your (primary) home",
   "index19": "If you do not want to give your zip code, please click the checkbox.",
   "index20": "Please select, if necessary, the less positive topics in your neighborhood. (Maximum 3)",
   "index21": "Supplies and market",
@@ -320,6 +321,9 @@
   "general122": "Click on the first point to close the area.",
 
   "general150": "Would you like to participate in next participatory processes in your city?"
+
+  "general151": "Observations"
+
 
 
 }
