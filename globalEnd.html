@@ -18,10 +18,17 @@
 
     <!--  Meta Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@engagingeo">
+    <meta name="twitter:site" content="@placeandcity">
     <meta name="twitter:title" content="Place and city">
     <meta name="twitter:description" content="Participatory process of Lisbon.">
-    <meta name="twitter:image" content="http://farm8.staticflickr.com/7334/11858349453_e3f18e5881_z.jpg">
+    <meta name="twitter:image" content="https://placeandcity.com/img/Place%20and%20City.png">
+
+    <!--  Meta Facebook -->
+    <meta property="og:url"           content="https://placeandcity.com/" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Place and City" />
+    <meta property="og:description"   content="Participatory process of Lisbon." />
+    <meta property="og:image"         content="https://placeandcity.com/img/Place%20and%20City.png" />
 
     <title>Place and City</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
@@ -40,6 +47,16 @@
 </head>
 
 <body>
+
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/ca_ES/sdk.js#xfbml=1&version=v3.0&appId=1255866227829550&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <!-- ------------------------------- Navbar ----------------------------------------------------------------------------- -->
 <nav class="navbar navbar-default navbar-fixed-top" style="margin-bottom: 0px">
@@ -183,7 +200,9 @@
 
                         <!--  Facebook  -->
 
-                        <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fplaceandcity.com&layout=button&size=small&mobile_iframe=true&appId=1255866227829550&width=81&height=20" width="90" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                       <!--  <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fplaceandcity.com&layout=button&size=small&mobile_iframe=true&appId=1255866227829550&width=81&height=20" width="90" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe> -->
+
+                       <div class="fb-share-button" data-href="https://placeandcity.com/" data-layout="button" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fplaceandcity.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Comparteix</a></div>
 
 
                         <!--  Twitter  -->
@@ -197,7 +216,7 @@
                     </div>
                     <!-- ----------------------------------  NEW  --------------------------- -->
                     <div  style="text-align: center; margin-top: 80px; margin-bottom: 80px">
-                        <a type="" id="blog" class="link-secondary h4" style="border: 1px solid; padding: 20px" href="http://blog.placeandcity.com/"><span langkey="NEWTEXT">Visita nuestro blog</span></a> 
+                        <a type="" id="blog" class="link-secondary h4" style="border: 1px solid; padding: 20px" href="http://blog.placeandcity.com/" target="_blank"><span langkey="NEWTEXT">Visita nuestro blog</span></a> 
                     </div>
                     <!-- ----------------------------------  End NEW  --------------------------- -->
                     
@@ -208,7 +227,7 @@
                     <hr>
                     <div style="text-align: center;">
                         <img src="img/Place and City.png" id="logo_place">
-                        <img src="img/camara.jpeg" id="logo_camara">
+                        <!-- <img src="img/camara.jpeg" id="logo_camara"> -->
                         <img src="img/geoc.png" id="logo_geoc">
                         <img src="img/mariecurie.png" id="logo_marie">
                         <img src="img/nova.png" id="logo_nova">
