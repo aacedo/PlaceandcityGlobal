@@ -15,15 +15,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-
-    <!--  Meta Twitter -->
-    <!-- <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@placeandcity">
-    <meta name="twitter:title" content="Place and city">
-    <meta name="twitter:description" content="I already did the place and city survey. Try it! Let’s define new boundaries of interaction together!">
-    <meta name="twitter:image" content="https://placeandcity.com/img/Place%20and%20City.png"> -->
-
-
     <title>Place and City</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
     <link href="css/styles_general.css" rel="stylesheet" type="text/css"/>
@@ -41,6 +32,16 @@
 </head>
 
 <body>
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.0&appId=1255866227829550&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <!-- ------------------------------- Navbar ----------------------------------------------------------------------------- -->
 <nav class="navbar navbar-default navbar-fixed-top" style="margin-bottom: 0px">
     <div class="container-fluid">
