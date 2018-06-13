@@ -45,6 +45,16 @@
 </head>
 
 <body>
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.0&appId=1255866227829550&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <!--  Login Facebook -->
 <!-- <div id="fb-root"></div>
 <script>
@@ -220,8 +230,9 @@
                             <span langkey="index19"> Se não desejar indicar o seu código postal, selecione por favor na caixa</span>
                         </label>
                     </div>
+                    <div class="no-float"></div>
 
-                    <div style="margin-bottom: 20px">
+                    <div style="margin-bottom: 20px; margin-top: 20px; text-align: center">
                         <p style="font-weight: bold;" langkey="index18a">Nacionalidade</p>
                         <select id = "homecountry" style="width: 67%; max-width: 100%">
                             <option value="A0"  selected="selected"></option>
