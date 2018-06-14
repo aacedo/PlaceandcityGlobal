@@ -64,23 +64,27 @@ function startall() {
     $('#how_long_no').click(function () {
         var zip = $('#zipglobal').val();
 
-        if ($("input:checkbox[name='no_zipglobal']").is(':checked')) {
+        if ($("input:checkbox[name='no_zipglobal']").is(':checked') && ($("#homecountry").val() != "A0") ) {
             $('#myModal12').modal({backdrop: 'static', keyboard: false});
         }
-        else if ($('#zipglobal').val() =="") {
+        else if ($("input:checkbox[name='no_zipglobal']").is(':checked') && ($("#homecountry").val() == "A0") ) {
             // alert("Please, write the zip code");
+            alert(translator.getKeyLanguageValue("general10A"));
+        }
+        else if (($('#zipglobal').val() =="") && ($("#homecountry").val() == "A0")) {
+            alert(translator.getKeyLanguageValue("general2"));
+            alert(translator.getKeyLanguageValue("general10A"));
+        }
+        else if (($('#zipglobal').val() !="") && ($("#homecountry").val() == "A0")) {
+            alert(translator.getKeyLanguageValue("general10A"));
+        }
+        else if (($('#zipglobal').val() =="") && ($("#homecountry").val() != "A0")) {
             alert(translator.getKeyLanguageValue("general2"));
         }
-        else {
-
+        else{
             $('#myModal12').modal({backdrop: 'static', keyboard: false});
-
         }
 
-        if (($("#homecountry").val() == "A0")) {
-            alert(translator.getKeyLanguageValue("general10A"));
-            return;
-        }
 
     });
 
